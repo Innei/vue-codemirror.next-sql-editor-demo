@@ -11,8 +11,8 @@ import { indentOnInput } from '@codemirror/language'
 import { languages } from '@codemirror/language-data'
 import { bracketMatching } from '@codemirror/matchbrackets'
 import { EditorState } from '@codemirror/state'
-import { oneDark } from '@codemirror/theme-one-dark'
 import { EditorView, highlightActiveLine, keymap } from '@codemirror/view'
+import { githubLight } from '@ddietr/codemirror-themes/theme/github-light'
 import { onMounted, ref, Ref } from 'vue'
 export const customTheme = EditorView.theme({
   '&': {
@@ -75,7 +75,7 @@ export const useCodeMirror = <T extends Element>(
         // sql({ dialect: MySQL }),
 
         syntaxHighlighting,
-        oneDark,
+        githubLight,
         EditorView.lineWrapping,
         EditorView.updateListener.of((update) => {
           if (update.changes) {

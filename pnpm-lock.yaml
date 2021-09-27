@@ -12,8 +12,8 @@ specifiers:
   '@codemirror/language-data': ^0.19.0
   '@codemirror/matchbrackets': ^0.19.1
   '@codemirror/state': ^0.19.0
-  '@codemirror/theme-one-dark': ^0.19.0
   '@codemirror/view': ^0.19.8
+  '@ddietr/codemirror-themes': ^1.0.8
   '@rollup/plugin-commonjs': 20.0.0
   '@rollup/plugin-node-resolve': 13.0.5
   '@rollup/plugin-typescript': 8.2.5
@@ -56,8 +56,8 @@ devDependencies:
   '@codemirror/language-data': 0.19.0
   '@codemirror/matchbrackets': 0.19.2
   '@codemirror/state': 0.19.2
-  '@codemirror/theme-one-dark': 0.19.0
   '@codemirror/view': 0.19.8
+  '@ddietr/codemirror-themes': 1.0.8
   '@rollup/plugin-commonjs': 20.0.0_rollup@2.57.0
   '@rollup/plugin-node-resolve': 13.0.5_rollup@2.57.0
   '@rollup/plugin-typescript': 8.2.5_283b0408a190511f1240c12469d64cd5
@@ -656,14 +656,6 @@ packages:
     resolution: {integrity: sha512-A0HBPZRwQ72XVMN1tg/pVUnvS5CKboBeHZE7cylYw0ljx9eX+NoYaK7apPSJO/Fwh9XhH9m8Va06EGc11VOzUw==}
     dev: true
 
-  /@codemirror/theme-one-dark/0.19.0:
-    resolution: {integrity: sha512-Xlk68ARreanFveE+KvZJY4HxecNr+VKDOR61O8l3kzlQ0qvxNXA0KAp1xu4p32pA9jzJqJi5haIgdfWSZogXZg==}
-    dependencies:
-      '@codemirror/highlight': 0.19.6
-      '@codemirror/state': 0.19.2
-      '@codemirror/view': 0.19.8
-    dev: true
-
   /@codemirror/tooltip/0.19.2:
     resolution: {integrity: sha512-FMMGGLrr62Ck54NEz8yTGpgo8ihobAsC3sbeQg+OpY4jv9dt1yIP5B9LzsIV+TXQB57JZQZxtTqzkhnFq76haw==}
     dependencies:
@@ -688,6 +680,14 @@ packages:
 
   /@cush/relative/1.0.0:
     resolution: {integrity: sha512-RpfLEtTlyIxeNPGKcokS+p3BZII/Q3bYxryFRglh5H3A3T8q9fsLYm72VYAMEOOIBLEa8o93kFLiBDUWKrwXZA==}
+    dev: true
+
+  /@ddietr/codemirror-themes/1.0.8:
+    resolution: {integrity: sha512-z8b7x0ZBMrncJf+KatM3/8TdqX/YgeXBPLabthPRPde/2QMXaIgg/RIFQ1hd3HVfBSEC01Ub/pcnBJgNMgbkBg==}
+    dependencies:
+      '@codemirror/highlight': 0.19.6
+      '@codemirror/state': 0.19.2
+      '@codemirror/view': 0.19.8
     dev: true
 
   /@istanbuljs/load-nyc-config/1.1.0:
