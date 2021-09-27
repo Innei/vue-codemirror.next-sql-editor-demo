@@ -10,6 +10,8 @@
     "moduleResolution": "node",
     "strict": true,
     "resolveJsonModule": true,
+    "jsxFactory": "h",
+    "jsx": "preserve",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,

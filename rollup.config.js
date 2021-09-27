@@ -1,15 +1,12 @@
 //@ts-check
-import typescript from '@rollup/plugin-typescript'
-import { terser } from 'rollup-plugin-terser'
-
-// import esbuild from 'rollup-plugin-esbuild'
-import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
-
-// import { babel } from '@rollup/plugin-babel'
-
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import postcss from 'rollup-plugin-postcss'
+import { terser } from 'rollup-plugin-terser'
+import vuePlugin from 'rollup-plugin-vue'
 
 const packageJson = require('./package.json')
 
@@ -18,6 +15,7 @@ const umdName = packageJson.name
 const globals = {
   ...packageJson.devDependencies,
 }
+const isProduction = process.env.NODE_ENV === 'production'
 
 const dir = 'build'
 
@@ -77,26 +75,19 @@ const config = [
       nodeResolve(),
       commonjs({ include: 'node_modules/**' }),
       typescript({ tsconfig: './src/tsconfig.json', declaration: false }),
-      // esbuild({
-      //   include: /\.[jt]sx?$/,
-      //   exclude: /node_modules/,
-      //   sourceMap: false,
-      //   minify: process.env.NODE_ENV === 'production',
-      //   target: 'es2017',
-      //   jsxFactory: 'React.createElement',
-      //   jsxFragment: 'React.Fragment',
-      //   define: {
-      //     __VERSION__: '"x.y.z"',
-      //   },
-      //   tsconfig: './src/tsconfig.json',
-      //   loaders: {
-      //     '.json': 'json',
-      //     '.js': 'jsx',
-      //   },
-      // }),
-      // @ts-ignore
+      vuePlugin({}),
+
+      postcss({
+        // @ts-ignore
+        config: {
+          path: './postcss.config.js',
+        },
+        extensions: ['.css'],
+        extract: true,
+        minimize: isProduction,
+        // modules: true,
+      }), //@ts-ignore
       peerDepsExternal(),
-      // babel({}),
     ],
 
     treeshake: true,

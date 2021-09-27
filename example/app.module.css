@@ -1,0 +1,3 @@
+.wrapper {
+  @apply h-screen bg-blue-100 bg-opacity-50;
+}
