@@ -1,16 +1,16 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@codemirror/commands': ^0.19.1
-  '@codemirror/gutter': ^0.19.0
-  '@codemirror/highlight': ^0.19.1
-  '@codemirror/history': ^0.19.0
-  '@codemirror/lang-sql': ^0.19.3
-  '@codemirror/language': ^0.19.2
-  '@codemirror/language-data': ^0.19.0
-  '@codemirror/matchbrackets': ^0.19.1
-  '@codemirror/state': ^0.19.0
-  '@codemirror/view': ^0.19.8
+  '@codemirror/commands': 0.19.5
+  '@codemirror/gutter': 0.19.2
+  '@codemirror/highlight': 0.19.6
+  '@codemirror/history': 0.19.0
+  '@codemirror/lang-sql': 0.19.3
+  '@codemirror/language': 0.19.3
+  '@codemirror/language-data': 0.19.0
+  '@codemirror/matchbrackets': 0.19.3
+  '@codemirror/state': 0.19.2
+  '@codemirror/view': 0.19.8
   '@ddietr/codemirror-themes': ^1.0.8
   '@rollup/plugin-commonjs': 20.0.0
   '@rollup/plugin-node-resolve': 13.0.5
@@ -50,7 +50,7 @@ devDependencies:
   '@codemirror/lang-sql': 0.19.3
   '@codemirror/language': 0.19.3
   '@codemirror/language-data': 0.19.0
-  '@codemirror/matchbrackets': 0.19.2
+  '@codemirror/matchbrackets': 0.19.3
   '@codemirror/state': 0.19.2
   '@codemirror/view': 0.19.8
   '@ddietr/codemirror-themes': 1.0.8
@@ -423,7 +423,7 @@ packages:
     resolution: {integrity: sha512-8PZOtx7d/GbKhFYA88zs2wINDtaUgj3pEjLYScKTd/Vsyw8qOp86tJQQNnMFTRZj/ISQl9Lbg3aAmHvroMqspw==}
     dependencies:
       '@codemirror/language': 0.19.3
-      '@codemirror/matchbrackets': 0.19.2
+      '@codemirror/matchbrackets': 0.19.3
       '@codemirror/state': 0.19.2
       '@codemirror/text': 0.19.3
       '@codemirror/view': 0.19.8
@@ -609,8 +609,8 @@ packages:
       crelt: 1.0.5
     dev: true
 
-  /@codemirror/matchbrackets/0.19.2:
-    resolution: {integrity: sha512-gei8qArf0dQsItYRe1153CCtYIoPNHvFICUz3/QLgEit2gAhmGIGH713nSDDYCyNoPGnJmfomaAsmGO8E9uLyg==}
+  /@codemirror/matchbrackets/0.19.3:
+    resolution: {integrity: sha512-ljkrBxaLgh8jesroUiBa57pdEwqJamxkukXrJpL9LdyFZVJaF+9TldhztRaMsMZO1XnCSSHQ9sg32iuHo7Sc2g==}
     dependencies:
       '@codemirror/language': 0.19.3
       '@codemirror/state': 0.19.2
