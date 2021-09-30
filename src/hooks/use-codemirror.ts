@@ -1,44 +1,48 @@
+import {
+  acceptCompletion,
+  autocompletion,
+  completionKeymap,
+  startCompletion,
+} from '@codemirror/autocomplete'
 import { defaultKeymap } from '@codemirror/commands'
 import { highlightActiveLineGutter, lineNumbers } from '@codemirror/gutter'
-import {
-  defaultHighlightStyle,
-  HighlightStyle,
-  tags,
-} from '@codemirror/highlight'
+import { defaultHighlightStyle, HighlightStyle } from '@codemirror/highlight'
 import { history, historyKeymap } from '@codemirror/history'
-import { markdown, markdownLanguage } from '@codemirror/lang-markdown'
+import { MySQL, schemaCompletion, sql } from '@codemirror/lang-sql'
 import { indentOnInput } from '@codemirror/language'
-import { languages } from '@codemirror/language-data'
 import { bracketMatching } from '@codemirror/matchbrackets'
 import { EditorState } from '@codemirror/state'
-import { EditorView, highlightActiveLine, keymap } from '@codemirror/view'
+import {
+  EditorView,
+  highlightActiveLine,
+  KeyBinding,
+  keymap,
+} from '@codemirror/view'
 import { githubLight } from '@ddietr/codemirror-themes/theme/github-light'
 import { onMounted, ref, Ref } from 'vue'
+
 export const customTheme = EditorView.theme({
   '&': {
     height: '100%',
   },
+  '&:focus': {
+    outline: 'none !important',
+  },
 })
+const customKeyMap: KeyBinding[] = [
+  {
+    key: 'Tab',
+    run(target) {
+      return acceptCompletion(target)
+    },
+  },
+  {
+    key: 'Shift-Space',
+    run: startCompletion,
+  },
+]
 
-const syntaxHighlighting = HighlightStyle.define([
-  {
-    tag: tags.heading1,
-    fontSize: '1.6em',
-    fontWeight: 'bold',
-  },
-  {
-    tag: tags.heading2,
-    fontSize: '1.4em',
-    fontWeight: 'bold',
-  },
-  {
-    tag: tags.heading3,
-    fontSize: '1.2em',
-    fontWeight: 'bold',
-  },
-  { tag: tags.strong, fontWeight: 'bold' },
-  { tag: tags.emphasis, fontStyle: 'italic' },
-])
+const syntaxHighlighting = HighlightStyle.define([])
 
 interface Props {
   initialDoc: string
@@ -58,7 +62,12 @@ export const useCodeMirror = <T extends Element>(
     const startState = EditorState.create({
       doc: props.initialDoc,
       extensions: [
-        keymap.of([...defaultKeymap, ...historyKeymap]),
+        keymap.of([
+          ...defaultKeymap,
+          ...historyKeymap,
+          ...completionKeymap,
+          ...customKeyMap,
+        ]),
         lineNumbers(),
         highlightActiveLineGutter(),
         history(),
@@ -66,13 +75,18 @@ export const useCodeMirror = <T extends Element>(
         bracketMatching(),
         defaultHighlightStyle.fallback,
         highlightActiveLine(),
-        markdown({
-          base: markdownLanguage,
-          codeLanguages: languages,
-          addKeymap: true,
+        autocompletion({
+          activateOnTyping: true,
+          defaultKeymap: true,
         }),
-
-        // sql({ dialect: MySQL }),
+        schemaCompletion({ dialect: MySQL }),
+        sql({
+          dialect: MySQL,
+          tables: [{ label: 'table-1' }],
+          schema: {
+            'table-1': [{ label: 'schema-1' }],
+          },
+        }),
 
         syntaxHighlighting,
         githubLight,

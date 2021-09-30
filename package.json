@@ -32,16 +32,6 @@
     "vue": "^3"
   },
   "devDependencies": {
-    "@codemirror/commands": "^0.19.1",
-    "@codemirror/gutter": "^0.19.0",
-    "@codemirror/highlight": "^0.19.1",
-    "@codemirror/history": "^0.19.0",
-    "@codemirror/lang-sql": "^0.19.3",
-    "@codemirror/language": "^0.19.2",
-    "@codemirror/language-data": "^0.19.0",
-    "@codemirror/matchbrackets": "^0.19.1",
-    "@codemirror/state": "^0.19.0",
-    "@codemirror/view": "^0.19.8",
     "@rollup/plugin-commonjs": "20.0.0",
     "@rollup/plugin-node-resolve": "13.0.5",
     "@rollup/plugin-typescript": "8.2.5",
@@ -70,8 +60,20 @@
     "unplugin-auto-import": "^0.4.8",
     "vite": "2.5.10",
     "vite-tsconfig-paths": "3.3.14",
-    "vue": "^3",
-    "@ddietr/codemirror-themes": "^1.0.8"
+    "vue": "^3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@codemirror/autocomplete": "^0.19.3",
+    "@codemirror/commands": "^0.19.1",
+    "@codemirror/gutter": "^0.19.0",
+    "@codemirror/highlight": "^0.19.1",
+    "@codemirror/history": "^0.19.0",
+    "@codemirror/lang-sql": "^0.19.3",
+    "@codemirror/language": "^0.19.2",
+    "@codemirror/language-data": "^0.19.0",
+    "@codemirror/matchbrackets": "^0.19.1",
+    "@codemirror/state": "^0.19.0",
+    "@codemirror/view": "^0.19.8",
+    "@ddietr/codemirror-themes": "^1.0.8"
+  }
 }
