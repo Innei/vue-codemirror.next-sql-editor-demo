@@ -1,6 +1,7 @@
 import { EditorState } from '@codemirror/state'
+import { EditorView } from '@codemirror/view'
 import clsx from 'clsx'
-import { defineComponent, h, PropType, watchEffect } from 'vue'
+import { defineComponent, h, PropType, Ref, watchEffect } from 'vue'
 import { useCodeMirror } from '~/hooks/use-codemirror'
 import styles from './editor.module.css'
 export const Editor = defineComponent({
@@ -15,6 +16,9 @@ export const Editor = defineComponent({
     className: {
       type: String,
     },
+    editorRef: {
+      type: Object as PropType<Ref<EditorView | undefined>>,
+    },
   },
   setup(props) {
     const [refContainer, editorView] = useCodeMirror({
@@ -23,7 +27,9 @@ export const Editor = defineComponent({
     })
 
     watchEffect(() => {
-      console.log(toRaw(editorView.value))
+      if (props.editorRef && editorView.value) {
+        props.editorRef.value = editorView.value
+      }
     })
 
     return () => (

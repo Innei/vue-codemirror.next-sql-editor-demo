@@ -11,7 +11,7 @@ import { history, historyKeymap } from '@codemirror/history'
 import { MySQL, schemaCompletion, sql } from '@codemirror/lang-sql'
 import { indentOnInput } from '@codemirror/language'
 import { bracketMatching } from '@codemirror/matchbrackets'
-import { EditorState } from '@codemirror/state'
+import { Compartment, EditorState } from '@codemirror/state'
 import {
   EditorView,
   highlightActiveLine,
@@ -49,6 +49,31 @@ interface Props {
   onChange?: (state: EditorState) => void
 }
 
+export const reconfigureMap = {
+  defaultKeymap: new Compartment(),
+  historyKeymap: new Compartment(),
+  completionKeymap: new Compartment(),
+  customKeyMap: new Compartment(),
+  sql: new Compartment(),
+  theme: new Compartment(),
+}
+export const extensions = [
+  reconfigureMap.defaultKeymap.of(keymap.of(defaultKeymap)),
+  reconfigureMap.historyKeymap.of(keymap.of(historyKeymap)),
+  reconfigureMap.customKeyMap.of(keymap.of(customKeyMap)),
+  reconfigureMap.completionKeymap.of(keymap.of(completionKeymap)),
+  reconfigureMap.sql.of(
+    sql({
+      dialect: MySQL,
+      // tables: [{ label: 'table-1' }],
+      // schema: {
+      //   'table-1': [{ label: 'schema-1' }],
+      // },
+    }),
+  ),
+  reconfigureMap.theme.of(githubLight),
+]
+
 export const useCodeMirror = <T extends Element>(
   props: Props,
 ): [Ref<T | undefined>, Ref<EditorView | undefined>] => {
@@ -62,12 +87,7 @@ export const useCodeMirror = <T extends Element>(
     const startState = EditorState.create({
       doc: props.initialDoc,
       extensions: [
-        keymap.of([
-          ...defaultKeymap,
-          ...historyKeymap,
-          ...completionKeymap,
-          ...customKeyMap,
-        ]),
+        ...extensions,
         lineNumbers(),
         highlightActiveLineGutter(),
         history(),
@@ -80,16 +100,9 @@ export const useCodeMirror = <T extends Element>(
           defaultKeymap: true,
         }),
         schemaCompletion({ dialect: MySQL }),
-        sql({
-          dialect: MySQL,
-          tables: [{ label: 'table-1' }],
-          schema: {
-            'table-1': [{ label: 'schema-1' }],
-          },
-        }),
 
         syntaxHighlighting,
-        githubLight,
+
         EditorView.lineWrapping,
         EditorView.updateListener.of((update) => {
           if (update.changes) {
@@ -103,6 +116,7 @@ export const useCodeMirror = <T extends Element>(
       state: startState,
       parent: refContainer.value,
     })
+    // view.dispatch({ effects: StateEffect.reconfigure.of([]) })
 
     editorView.value = view
   })
