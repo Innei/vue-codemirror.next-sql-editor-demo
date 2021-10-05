@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind variants;
 @tailwind utilities;
+
+.n-data-table-wrapper,
+.n-data-table-base-table {
+  @apply min-h-full;
+}

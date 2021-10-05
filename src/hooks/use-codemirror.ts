@@ -5,6 +5,7 @@ import {
   startCompletion,
 } from '@codemirror/autocomplete'
 import { defaultKeymap } from '@codemirror/commands'
+import { commentKeymap } from '@codemirror/comment'
 import { highlightActiveLineGutter, lineNumbers } from '@codemirror/gutter'
 import { defaultHighlightStyle, HighlightStyle } from '@codemirror/highlight'
 import { history, historyKeymap } from '@codemirror/history'
@@ -18,7 +19,6 @@ import {
   KeyBinding,
   keymap,
 } from '@codemirror/view'
-import { githubLight } from '@ddietr/codemirror-themes/theme/github-light'
 import { onMounted, ref, Ref } from 'vue'
 
 export const customTheme = EditorView.theme({
@@ -53,6 +53,7 @@ export const reconfigureMap = {
   defaultKeymap: new Compartment(),
   historyKeymap: new Compartment(),
   completionKeymap: new Compartment(),
+  commentKeymap: new Compartment(),
   customKeyMap: new Compartment(),
   sql: new Compartment(),
   theme: new Compartment(),
@@ -62,16 +63,13 @@ export const extensions = [
   reconfigureMap.historyKeymap.of(keymap.of(historyKeymap)),
   reconfigureMap.customKeyMap.of(keymap.of(customKeyMap)),
   reconfigureMap.completionKeymap.of(keymap.of(completionKeymap)),
+  reconfigureMap.commentKeymap.of(keymap.of(commentKeymap)),
   reconfigureMap.sql.of(
     sql({
       dialect: MySQL,
-      // tables: [{ label: 'table-1' }],
-      // schema: {
-      //   'table-1': [{ label: 'schema-1' }],
-      // },
     }),
   ),
-  reconfigureMap.theme.of(githubLight),
+  reconfigureMap.theme.of(defaultHighlightStyle),
 ]
 
 export const useCodeMirror = <T extends Element>(
@@ -93,7 +91,7 @@ export const useCodeMirror = <T extends Element>(
         history(),
         indentOnInput(),
         bracketMatching(),
-        defaultHighlightStyle.fallback,
+
         highlightActiveLine(),
         autocompletion({
           activateOnTyping: true,
@@ -116,7 +114,6 @@ export const useCodeMirror = <T extends Element>(
       state: startState,
       parent: refContainer.value,
     })
-    // view.dispatch({ effects: StateEffect.reconfigure.of([]) })
 
     editorView.value = view
   })
