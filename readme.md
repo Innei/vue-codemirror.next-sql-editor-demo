@@ -1,6 +1,6 @@
 # SQL Editor Demo
 
-Demo at: <>
+Demo at: <https://innei.github.io/vue-codemirror.next-sql-editor-demo>
 
 ## Stack
 
