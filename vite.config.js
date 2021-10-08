@@ -9,20 +9,28 @@ export default defineConfig({
     vue(),
     tsconfigPaths({
       projects: [
-        resolve(__dirname, './example/tsconfig.json'),
+        resolve(__dirname, './app/tsconfig.json'),
         resolve(__dirname, './tsconfig.json'),
       ],
     }),
     AutoImport({
-      dts: './example/auto-import.d.ts',
+      dts: './app/auto-import.d.ts',
       imports: ['vue'],
     }),
   ],
-  root: resolve(__dirname, './example'),
+  root: resolve(__dirname, './app'),
+
   build: {
+    target: 'chrome92',
+
+    // lib: {
+    //   entry: './src/index.ts',
+    //   name: 'sql-editor',
+    //   formats: ['es'],
+    // },
     rollupOptions: {
       input: {
-        main: resolve(__dirname, './example/index.html'),
+        main: resolve(__dirname, './app/index.html'),
       },
     },
   },
