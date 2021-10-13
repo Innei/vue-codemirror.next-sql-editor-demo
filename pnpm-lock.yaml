@@ -40,7 +40,7 @@ specifiers:
   rollup-plugin-terser: 7.0.2
   rollup-plugin-vue: 6.0.0
   sql.js: 1.6.2
-  tailwindcss: 2.2.16
+  tailwindcss: 2.2.17
   ts-jest: 27.0.5
   tslib: 2.3.1
   typescript: 4.4.4
@@ -91,7 +91,7 @@ devDependencies:
   rollup-plugin-postcss: 4.0.1_postcss@8.3.9
   rollup-plugin-terser: 7.0.2_rollup@2.58.0
   rollup-plugin-vue: 6.0.0
-  tailwindcss: 2.2.16_postcss@8.3.9
+  tailwindcss: 2.2.17_postcss@8.3.9
   ts-jest: 27.0.5_fe15ac987db2e7d4ad38346689ae2fc5
   tslib: 2.3.1
   typescript: 4.4.4
@@ -5670,8 +5670,8 @@ packages:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
     dev: true
 
-  /tailwindcss/2.2.16_postcss@8.3.9:
-    resolution: {integrity: sha512-EireCtpQyyJ4Xz8NYzHafBoy4baCOO96flM0+HgtsFcIQ9KFy/YBK3GEtlnD+rXen0e4xm8t3WiUcKBJmN6yjg==}
+  /tailwindcss/2.2.17_postcss@8.3.9:
+    resolution: {integrity: sha512-WgRpn+Pxn7eWqlruxnxEbL9ByVRWi3iC10z4b6dW0zSdnkPVC4hPMSWLQkkW8GCyBIv/vbJ0bxIi9dVrl4CfoA==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
