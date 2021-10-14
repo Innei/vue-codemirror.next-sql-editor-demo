@@ -41,7 +41,7 @@ specifiers:
   rollup-plugin-vue: 6.0.0
   sql.js: 1.6.2
   tailwindcss: 2.2.17
-  ts-jest: 27.0.5
+  ts-jest: 27.0.6
   tslib: 2.3.1
   typescript: 4.4.4
   unplugin-auto-import: 0.4.12
@@ -92,7 +92,7 @@ devDependencies:
   rollup-plugin-terser: 7.0.2_rollup@2.58.0
   rollup-plugin-vue: 6.0.0
   tailwindcss: 2.2.17_postcss@8.3.9
-  ts-jest: 27.0.5_fe15ac987db2e7d4ad38346689ae2fc5
+  ts-jest: 27.0.6_fe15ac987db2e7d4ad38346689ae2fc5
   tslib: 2.3.1
   typescript: 4.4.4
   unplugin-auto-import: 0.4.12_rollup@2.58.0+vite@2.6.7
@@ -928,17 +928,6 @@ packages:
       '@types/yargs': 15.0.14
       chalk: 4.1.2
     dev: false
-
-  /@jest/types/27.0.6:
-    resolution: {integrity: sha512-aSquT1qa9Pik26JK5/3rvnYb4bGtm1VFNesHKmNTwmPIgOrixvhL2ghIvFRNEpzy3gU+rUgjIF/KodbkFAl++g==}
-    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
-    dependencies:
-      '@types/istanbul-lib-coverage': 2.0.3
-      '@types/istanbul-reports': 3.0.0
-      '@types/node': 15.0.2
-      '@types/yargs': 16.0.3
-      chalk: 4.1.1
-    dev: true
 
   /@jest/types/27.1.1:
     resolution: {integrity: sha512-yqJPDDseb0mXgKqmNqypCsb85C22K1aY5+LUxh7syIM9n/b0AsaltxNy+o6tt29VcfGDpYEve175bm3uOhcehA==}
@@ -3754,18 +3743,6 @@ packages:
       - supports-color
     dev: true
 
-  /jest-util/27.0.6:
-    resolution: {integrity: sha512-1JjlaIh+C65H/F7D11GNkGDDZtDfMEM8EBXsvd+l/cxtgQ6QhxuloOaiayt89DxUvDarbVhqI98HhgrM1yliFQ==}
-    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
-    dependencies:
-      '@jest/types': 27.0.6
-      '@types/node': 15.0.2
-      chalk: 4.1.1
-      graceful-fs: 4.2.6
-      is-ci: 3.0.0
-      picomatch: 2.3.0
-    dev: true
-
   /jest-util/27.2.5:
     resolution: {integrity: sha512-QRhDC6XxISntMzFRd/OQ6TGsjbzA5ONO0tlAj2ElHs155x1aEr0rkYJBEysG6H/gZVH3oGFzCdAB/GA8leh8NQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
@@ -5814,8 +5791,8 @@ packages:
       escape-string-regexp: 1.0.5
     dev: true
 
-  /ts-jest/27.0.5_fe15ac987db2e7d4ad38346689ae2fc5:
-    resolution: {integrity: sha512-lIJApzfTaSSbtlksfFNHkWOzLJuuSm4faFAfo5kvzOiRAuoN4/eKxVJ2zEAho8aecE04qX6K1pAzfH5QHL1/8w==}
+  /ts-jest/27.0.6_fe15ac987db2e7d4ad38346689ae2fc5:
+    resolution: {integrity: sha512-XWkEBbrkyUWJdK9FwiCVdBZ7ZmT7sxcKtyVEZNmo7u8eQw6NHmtYEM2WpkX9VfnRI0DjSr6INfEHC9vCFhsFnQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
     peerDependencies:
@@ -5836,9 +5813,9 @@ packages:
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
       jest: 27.2.5
-      jest-util: 27.0.6
+      jest-util: 27.2.5
       json5: 2.2.0
-      lodash: 4.17.21
+      lodash.memoize: 4.1.2
       make-error: 1.3.6
       semver: 7.3.5
       typescript: 4.4.4
