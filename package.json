@@ -61,7 +61,7 @@
     "unplugin-auto-import": "0.4.13",
     "vite": "2.6.13",
     "vite-tsconfig-paths": "3.3.17",
-    "vue": "3.2.20"
+    "vue": "3.2.21"
   },
   "dependencies": {
     "@codemirror/autocomplete": "^0.19.3",
