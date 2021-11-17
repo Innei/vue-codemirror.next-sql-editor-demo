@@ -43,7 +43,7 @@ specifiers:
   tailwindcss: 2.2.19
   ts-jest: 27.0.7
   tslib: 2.3.1
-  typescript: 4.4.4
+  typescript: 4.5.2
   unplugin-auto-import: 0.4.14
   vite: 2.6.14
   vite-tsconfig-paths: 3.3.17
@@ -71,7 +71,7 @@ dependencies:
 devDependencies:
   '@rollup/plugin-commonjs': 20.0.0_rollup@2.60.0
   '@rollup/plugin-node-resolve': 13.0.6_rollup@2.60.0
-  '@rollup/plugin-typescript': 8.3.0_15dfac413fd0241781a9fd89f988e2e5
+  '@rollup/plugin-typescript': 8.3.0_8237b289b1560ac087923ea403810077
   '@types/jest': 27.0.2
   '@types/lodash-es': 4.17.5
   '@types/node': 16.11.7
@@ -86,15 +86,15 @@ devDependencies:
   postcss-nested: 5.0.6_postcss@8.3.11
   postcss-preset-env: 6.7.0
   rollup: 2.60.0
-  rollup-plugin-dts: 3.0.2_rollup@2.60.0+typescript@4.4.4
+  rollup-plugin-dts: 3.0.2_rollup@2.60.0+typescript@4.5.2
   rollup-plugin-peer-deps-external: 2.2.4_rollup@2.60.0
   rollup-plugin-postcss: 4.0.1_postcss@8.3.11
   rollup-plugin-terser: 7.0.2_rollup@2.60.0
   rollup-plugin-vue: 6.0.0
   tailwindcss: 2.2.19_postcss@8.3.11
-  ts-jest: 27.0.7_2c4ca6574207836d1023f54689cc81ac
+  ts-jest: 27.0.7_013ef332172517e974c4b270e59f55f5
   tslib: 2.3.1
-  typescript: 4.4.4
+  typescript: 4.5.2
   unplugin-auto-import: 0.4.14_rollup@2.60.0+vite@2.6.14
   vite: 2.6.14
   vite-tsconfig-paths: 3.3.17_vite@2.6.14
@@ -1073,7 +1073,7 @@ packages:
       rollup: 2.60.0
     dev: true
 
-  /@rollup/plugin-typescript/8.3.0_15dfac413fd0241781a9fd89f988e2e5:
+  /@rollup/plugin-typescript/8.3.0_8237b289b1560ac087923ea403810077:
     resolution: {integrity: sha512-I5FpSvLbtAdwJ+naznv+B4sjXZUcIvLLceYpITAn7wAP8W0wqc5noLdGIp9HGVntNhRWXctwPYrSSFQxtl0FPA==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
@@ -1085,7 +1085,7 @@ packages:
       resolve: 1.20.0
       rollup: 2.60.0
       tslib: 2.3.1
-      typescript: 4.4.4
+      typescript: 4.5.2
     dev: true
 
   /@rollup/pluginutils/3.1.0_rollup@2.60.0:
@@ -5160,7 +5160,7 @@ packages:
       glob: 7.1.7
     dev: true
 
-  /rollup-plugin-dts/3.0.2_rollup@2.60.0+typescript@4.4.4:
+  /rollup-plugin-dts/3.0.2_rollup@2.60.0+typescript@4.5.2:
     resolution: {integrity: sha512-hswlsdWu/x7k5pXzaLP6OvKRKcx8Bzprksz9i9mUe72zvt8LvqAb/AZpzs6FkLgmyRaN8B6rUQOVtzA3yEt9Yw==}
     engines: {node: '>=v12.22.1'}
     peerDependencies:
@@ -5169,7 +5169,7 @@ packages:
     dependencies:
       magic-string: 0.25.7
       rollup: 2.60.0
-      typescript: 4.4.4
+      typescript: 4.5.2
     optionalDependencies:
       '@babel/code-frame': 7.12.13
     dev: true
@@ -5661,7 +5661,7 @@ packages:
       escape-string-regexp: 1.0.5
     dev: true
 
-  /ts-jest/27.0.7_2c4ca6574207836d1023f54689cc81ac:
+  /ts-jest/27.0.7_013ef332172517e974c4b270e59f55f5:
     resolution: {integrity: sha512-O41shibMqzdafpuP+CkrOL7ykbmLh+FqQrXEmV9CydQ5JBk0Sj0uAEF5TNNe94fZWKm3yYvWa/IbyV4Yg1zK2Q==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
@@ -5688,7 +5688,7 @@ packages:
       lodash.memoize: 4.1.2
       make-error: 1.3.6
       semver: 7.3.5
-      typescript: 4.4.4
+      typescript: 4.5.2
       yargs-parser: 20.2.7
     dev: true
 
@@ -5740,8 +5740,8 @@ packages:
       is-typedarray: 1.0.0
     dev: true
 
-  /typescript/4.4.4:
-    resolution: {integrity: sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==}
+  /typescript/4.5.2:
+    resolution: {integrity: sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
