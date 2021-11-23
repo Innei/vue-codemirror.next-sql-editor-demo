@@ -44,7 +44,7 @@ specifiers:
   ts-jest: 27.0.7
   tslib: 2.3.1
   typescript: 4.5.2
-  unplugin-auto-import: 0.4.14
+  unplugin-auto-import: 0.4.16
   vite: 2.6.14
   vite-tsconfig-paths: 3.3.17
   vue: 3.2.22
@@ -95,7 +95,7 @@ devDependencies:
   ts-jest: 27.0.7_7e2a439bb7b53c38ff0c1a3c5e04c2c5
   tslib: 2.3.1
   typescript: 4.5.2
-  unplugin-auto-import: 0.4.14_rollup@2.60.1+vite@2.6.14
+  unplugin-auto-import: 0.4.16_rollup@2.60.1+vite@2.6.14
   vite: 2.6.14
   vite-tsconfig-paths: 3.3.17_vite@2.6.14
   vue: 3.2.22
@@ -3774,8 +3774,9 @@ packages:
       json5: 1.0.1
     dev: true
 
-  /local-pkg/0.1.0:
-    resolution: {integrity: sha512-WsR2tHvRGIxcC2clC30ECb5fjywzsjQagaHIy1+ykZaHz0ByoB0OL2riHqIYA5YYnensRXLszwbzHkhKzehZDg==}
+  /local-pkg/0.4.0:
+    resolution: {integrity: sha512-2XBWjO/v63JeR1HPzLJxdTVRQDB84Av2p2KtBA5ahvpyLUPubcAU6iXlAJrONcY7aSqgJhXxElAnKtnYsRolPQ==}
+    engines: {node: '>=14'}
     dependencies:
       mlly: 0.2.4
     dev: true
@@ -5720,8 +5721,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /unplugin-auto-import/0.4.14_rollup@2.60.1+vite@2.6.14:
-    resolution: {integrity: sha512-ui+M+E30xrdbXGt0+MMEM4fKhDqoBlv+xVKiYllVqUplqg/sFuXe28DBxM2xi2zAbwd/Vw3KUcLdvSmjzpA7+A==}
+  /unplugin-auto-import/0.4.16_rollup@2.60.1+vite@2.6.14:
+    resolution: {integrity: sha512-OuYzwHnhMOleSUlEXInMV7Y2yM1o4iY1qBQHN8MCQ2dNKdAAjUo4ln0kZy2me21q0GBJSgtmuelHrODZdCRPXQ==}
     engines: {node: '>=14'}
     peerDependencies:
       '@vueuse/core': ^6.0.0
@@ -5731,7 +5732,7 @@ packages:
     dependencies:
       '@antfu/utils': 0.3.0
       '@rollup/pluginutils': 4.1.1
-      local-pkg: 0.1.0
+      local-pkg: 0.4.0
       magic-string: 0.25.7
       resolve: 1.20.0
       unplugin: 0.2.16_rollup@2.60.1+vite@2.6.14
