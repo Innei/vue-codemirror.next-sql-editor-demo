@@ -44,7 +44,7 @@ specifiers:
   ts-jest: 27.0.7
   tslib: 2.3.1
   typescript: 4.5.2
-  unplugin-auto-import: 0.4.18
+  unplugin-auto-import: 0.4.19
   vite: 2.6.14
   vite-tsconfig-paths: 3.3.17
   vue: 3.2.23
@@ -95,7 +95,7 @@ devDependencies:
   ts-jest: 27.0.7_7e2a439bb7b53c38ff0c1a3c5e04c2c5
   tslib: 2.3.1
   typescript: 4.5.2
-  unplugin-auto-import: 0.4.18_rollup@2.60.1+vite@2.6.14
+  unplugin-auto-import: 0.4.19_rollup@2.60.1+vite@2.6.14
   vite: 2.6.14
   vite-tsconfig-paths: 3.3.17_vite@2.6.14
   vue: 3.2.23
@@ -5721,8 +5721,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /unplugin-auto-import/0.4.18_rollup@2.60.1+vite@2.6.14:
-    resolution: {integrity: sha512-cbb6uuNo07ZyeaTQtFChDWxpApZC5z9aKBCR2SxLzJ8JYY70kDuS9MFOCfRB+v96rLbtenjdsgBlErYGqA+9zQ==}
+  /unplugin-auto-import/0.4.19_rollup@2.60.1+vite@2.6.14:
+    resolution: {integrity: sha512-tyDJ+I/ROP3SqPn4pbuhJ4ZtRvN3upv5eUcw6fhouLS86T4SrDFFlPAjypityCD7sxs5LfjeTbCT58JJ1HmpXg==}
     engines: {node: '>=14'}
     peerDependencies:
       '@vueuse/core': '*'
