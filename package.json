@@ -41,7 +41,7 @@
     "@types/sql.js": "1.4.3",
     "@vitejs/plugin-vue": "1.10.1",
     "clsx": "1.1.1",
-    "esbuild": "0.14.0",
+    "esbuild": "0.14.1",
     "gh-pages": "3.2.3",
     "jest": "27.4.0",
     "postcss": "8.4.4",
