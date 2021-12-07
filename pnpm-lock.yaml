@@ -21,7 +21,7 @@ specifiers:
   '@types/lodash-es': 4.17.5
   '@types/node': 16.11.12
   '@types/sql.js': 1.4.3
-  '@vitejs/plugin-vue': 1.10.1
+  '@vitejs/plugin-vue': 1.10.2
   clsx: 1.1.1
   cors: 2.8.5
   esbuild: 0.14.2
@@ -76,7 +76,7 @@ devDependencies:
   '@types/lodash-es': 4.17.5
   '@types/node': 16.11.12
   '@types/sql.js': 1.4.3
-  '@vitejs/plugin-vue': 1.10.1_vite@2.6.14
+  '@vitejs/plugin-vue': 1.10.2_vite@2.6.14
   clsx: 1.1.1
   esbuild: 0.14.2
   gh-pages: 3.2.3
@@ -1275,8 +1275,8 @@ packages:
       '@types/yargs-parser': 20.2.0
     dev: true
 
-  /@vitejs/plugin-vue/1.10.1_vite@2.6.14:
-    resolution: {integrity: sha512-oL76QETMSpVE9jIScirGB2bYJEVU/+r+g+K7oG+sXPs9TZljqveoVRsmLyXlMZTjpQkLL8gz527cW80NMGVKJg==}
+  /@vitejs/plugin-vue/1.10.2_vite@2.6.14:
+    resolution: {integrity: sha512-/QJ0Z9qfhAFtKRY+r57ziY4BSbGUTGsPRMpB/Ron3QPwBZM4OZAZHdTa4a8PafCwU5DTatXG8TMDoP8z+oDqJw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: ^2.5.10
