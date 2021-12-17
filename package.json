@@ -78,7 +78,7 @@
     "@codemirror/view": "^0.19.8",
     "@ddietr/codemirror-themes": "^1.0.8",
     "cors": "2.8.5",
-    "express": "4.17.1",
+    "express": "4.17.2",
     "naive-ui": "^2.19.3",
     "sql.js": "1.6.2"
   }
