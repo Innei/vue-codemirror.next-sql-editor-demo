@@ -45,7 +45,7 @@ specifiers:
   tslib: 2.3.1
   typescript: 4.5.4
   unplugin-auto-import: 0.5.3
-  vite: 2.7.3
+  vite: 2.7.4
   vite-tsconfig-paths: 3.3.17
   vue: 3.2.26
 
@@ -76,7 +76,7 @@ devDependencies:
   '@types/lodash-es': 4.17.5
   '@types/node': 16.11.14
   '@types/sql.js': 1.4.3
-  '@vitejs/plugin-vue': 1.10.2_vite@2.7.3
+  '@vitejs/plugin-vue': 1.10.2_vite@2.7.4
   clsx: 1.1.1
   esbuild: 0.14.6
   gh-pages: 3.2.3
@@ -95,9 +95,9 @@ devDependencies:
   ts-jest: 27.1.2_8f16229fe3b792bd830586f826fe71df
   tslib: 2.3.1
   typescript: 4.5.4
-  unplugin-auto-import: 0.5.3_rollup@2.61.1+vite@2.7.3
-  vite: 2.7.3
-  vite-tsconfig-paths: 3.3.17_vite@2.7.3
+  unplugin-auto-import: 0.5.3_rollup@2.61.1+vite@2.7.4
+  vite: 2.7.4
+  vite-tsconfig-paths: 3.3.17_vite@2.7.4
   vue: 3.2.26
 
 packages:
@@ -1264,13 +1264,13 @@ packages:
       '@types/yargs-parser': 20.2.0
     dev: true
 
-  /@vitejs/plugin-vue/1.10.2_vite@2.7.3:
+  /@vitejs/plugin-vue/1.10.2_vite@2.7.4:
     resolution: {integrity: sha512-/QJ0Z9qfhAFtKRY+r57ziY4BSbGUTGsPRMpB/Ron3QPwBZM4OZAZHdTa4a8PafCwU5DTatXG8TMDoP8z+oDqJw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: ^2.5.10
     dependencies:
-      vite: 2.7.3
+      vite: 2.7.4
     dev: true
 
   /@vue/compiler-core/3.2.26:
@@ -5897,7 +5897,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /unplugin-auto-import/0.5.3_rollup@2.61.1+vite@2.7.3:
+  /unplugin-auto-import/0.5.3_rollup@2.61.1+vite@2.7.4:
     resolution: {integrity: sha512-jXs0rnKTS+/TyXOild6RkVp73yz1DeLXVJWR6VRn+oageEsvHgW6zofvc2BmpAm/pTSANxZ48kLi12wOa/iwdw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -5911,14 +5911,14 @@ packages:
       local-pkg: 0.4.0
       magic-string: 0.25.7
       resolve: 1.20.0
-      unplugin: 0.2.21_rollup@2.61.1+vite@2.7.3
+      unplugin: 0.2.21_rollup@2.61.1+vite@2.7.4
     transitivePeerDependencies:
       - rollup
       - vite
       - webpack
     dev: true
 
-  /unplugin/0.2.21_rollup@2.61.1+vite@2.7.3:
+  /unplugin/0.2.21_rollup@2.61.1+vite@2.7.4:
     resolution: {integrity: sha512-IJ15/L5XbhnV7J09Zjk0FT5HEkBjkXucWAXQWRsmEtUxmmxwh23yavrmDbCF6ZPxWiVB28+wnKIHePTRRpQPbQ==}
     peerDependencies:
       rollup: ^2.50.0
@@ -5933,7 +5933,7 @@ packages:
         optional: true
     dependencies:
       rollup: 2.61.1
-      vite: 2.7.3
+      vite: 2.7.4
       webpack-virtual-modules: 0.4.3
     dev: true
 
@@ -5978,7 +5978,7 @@ packages:
     resolution: {integrity: sha512-vQBcvntBlnAPonAkGNM8iJ9NxE3PucA+V2W95xiN75YJKxirLJvOws2kEyOEO45T4N+YTbQOCR2m77Y05pfVhQ==}
     dev: false
 
-  /vite-tsconfig-paths/3.3.17_vite@2.7.3:
+  /vite-tsconfig-paths/3.3.17_vite@2.7.4:
     resolution: {integrity: sha512-wx+rfC53moVLxMBj2EApJZgY6HtvWUFVZ4dBxNGYBxSSqU6UaHdKlcOxrfGDxyTGtYEr9beWCryHn18C4EtZkg==}
     peerDependencies:
       vite: '>2.0.0-0'
@@ -5987,13 +5987,13 @@ packages:
       globrex: 0.1.2
       recrawl-sync: 2.2.1
       tsconfig-paths: 3.9.0
-      vite: 2.7.3
+      vite: 2.7.4
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite/2.7.3:
-    resolution: {integrity: sha512-GAY1P+9fLJOju1SRm8+hykVnEXog+E+KXuqqyMBQDriKCUIKzWnPn142yNNhSdf/ixYGYdUa5ce3A8WaEajzGw==}
+  /vite/2.7.4:
+    resolution: {integrity: sha512-f+0426k9R/roz5mRNwJlQ+6UOnhCwIypJSbfgCmsVzVJe9jTTM5iRX2GWYUean+iqPBWaU/dYLryx9AoH2pmrw==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
