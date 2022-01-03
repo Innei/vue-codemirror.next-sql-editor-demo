@@ -37,7 +37,7 @@
     "@rollup/plugin-typescript": "8.3.0",
     "@types/jest": "27.4.0",
     "@types/lodash-es": "4.17.5",
-    "@types/node": "16.11.17",
+    "@types/node": "16.11.18",
     "@types/sql.js": "1.4.3",
     "@vitejs/plugin-vue": "1.10.2",
     "clsx": "1.1.1",
